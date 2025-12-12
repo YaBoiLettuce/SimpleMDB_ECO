@@ -17,7 +17,7 @@ this.movieService = movieService;
 
 
 // curl -X GET "http://localhost:8080/api/v1/movies?page=1&size=10"
-public async Task ReadMovies(HttpListenerRequest req, HttpListenerResponse res, Hashtable props, Func<Task> next)
+public async Task ReadMovie(HttpListenerRequest req, HttpListenerResponse res, Hashtable props, Func<Task> next)
 {
 int page = int.TryParse(req.QueryString["page"], out int p) ? p : 1;
 int size = int.TryParse(req.QueryString["size"], out int s) ? s : 9;
