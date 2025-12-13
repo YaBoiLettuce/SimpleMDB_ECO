@@ -19,21 +19,26 @@
             </ul>
         </nav>
     </header>
+
     <main class="container">
         <div id="status" class="status">Loading...</div>
+
         <form id="movie-form" class="grid">
             <div class="field">
                 <label for="title">Title</label>
                 <input id="title" name="title" type="text" required />
             </div>
+
             <div class="field">
                 <label for="year">Year</label>
                 <input id="year" name="year" type="number" min="1888" max="9999" required />
             </div>
+
             <div class="field">
                 <label for="description">Description</label>
                 <textarea id="description" name="description"></textarea>
             </div>
+
             <div class="form-actions">
                 <button class="btn primary" type="submit">Save Changes</button>
                 <a class="btn" href="/movies/index.html">Cancel</a>
