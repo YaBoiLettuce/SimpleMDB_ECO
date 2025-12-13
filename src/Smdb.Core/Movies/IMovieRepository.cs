@@ -1,7 +1,6 @@
 namespace Smdb.Core.Movies;
 
 using Shared.Http;
-using Shared.Http.Shared.Http;
 
 public interface IMovieRepository
 {

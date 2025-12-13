@@ -1,6 +1,6 @@
 namespace Smdb.Core.Movies;
 
-using Shared.Http.Shared.Http;
+using Shared.Http;
 using System.Net;
 public class DefaultMovieService : IMovieService
 {
