@@ -1,10 +1,16 @@
 export const API_BASE = 'http://localhost:8080/api/v1';
+
 export const $ = (sel, el = document) => el.querySelector(sel);
 export const $$ = (sel, el = document) => Array.from(el.querySelectorAll(sel));
+
 export const getQueryParam = (k) => new URLSearchParams(location.search).get(k);
+
 function jsonHeaders() {
     return { 'Content-Type': 'application/json', 'Accept': 'application/json' };
-} export async function apiFetch(path, opts = {}) {
+}
+
+
+export async function apiFetch(path, opts = {}) {
     const url = path.startsWith('http') ? path : `${API_BASE}${path}`;
     const init = {
         ...opts,
@@ -23,15 +29,23 @@ function jsonHeaders() {
         throw err;
     }
     return payload;
-} export function renderStatus(el, type, message) {
+}
+
+
+export function renderStatus(el, type, message) {
     if (!el) return;
     el.className = `status ${type}`;
     el.textContent = message;
 }
+
+
 export function clearChildren(el) {
-    //while (el.firstChild) el.removeChild(el.firstChild);
+    //while (el.firstChild) el.removeChild(el.firstChild); 
     el.replaceChildren();
-} export function captureMovieForm(form) {
+}
+
+
+export function captureMovieForm(form) {
     const title = form.title.value.trim();
     const year = Number(form.year.value);
     const description = form.description.value.trim();

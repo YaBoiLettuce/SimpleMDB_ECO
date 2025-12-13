@@ -64,6 +64,6 @@ public class MemoryMovieRepository : IMovieRepository
 
         if (result != null) { db.Movies.Remove(result); } // Si existe, elimina
 
-        return await Task.FromResult(result); // Retorna la película eliminada (o null si no existe)
-    }
+        return await Task.FromResult(result); // Retorna la película eliminada (o null si no existe)
+    }
 }

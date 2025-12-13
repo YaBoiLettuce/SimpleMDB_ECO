@@ -8,7 +8,7 @@ public class MoviesRouter : HttpRouter
     {
         UseParametrizedRouteMatching();
         // GET /api/v1/movies/
-        MapGet("/", moviesController.ReadMovie);
+        MapGet("/", moviesController.ReadMovies);
         //POST /api/v1/movies/
         MapPost("/", HttpUtils.ReadRequestBodyAsText, moviesController.CreateMovie);
         // GET /api/v1/movies/1
